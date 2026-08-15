@@ -1,0 +1,1276 @@
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>今週のAIニュース「伝え方」テンプレ100選</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet"><style>
+:root{--brand:#1C3461;--brand-deep:#16284A;--brand-soft:rgba(28,52,97,.08);--accent:#5BBCD4;--accent-deep:#2C7A93;
+--bg:#F7FAFC;--paper:#FFFFFF;--ink:#1C3461;--ink-mid:#4A6080;--line:rgba(28,52,97,.12);--head:'Noto Sans JP';}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',-apple-system,'Hiragino Sans',sans-serif;line-height:1.7;}
+.wrap{max-width:960px;margin:0 auto;background:var(--paper);min-height:100vh;}
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px solid var(--brand);padding:16px 28px;}
+header .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+header img{width:40px;height:40px;border-radius:50%;border:2px solid var(--paper);box-shadow:0 2px 8px rgba(0,0,0,.14);}
+header .ttl{font-family:var(--head);font-weight:900;font-size:19px;color:var(--brand-deep);line-height:1.2;}
+header .ttl small{display:block;font-size:12px;color:var(--ink-mid);font-weight:500;}
+.badge{display:inline-block;background:var(--brand);color:#fff;font-family:var(--head);font-weight:900;font-size:13px;border-radius:999px;padding:4px 14px;}
+.hbtns{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);border:2px solid var(--brand);color:var(--ink);
+border-radius:999px;padding:8px 18px;font-weight:900;font-size:14px;cursor:pointer;text-decoration:none;font-family:'Noto Sans JP';}
+.btn.ghost{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);}
+.btn.sm{padding:6px 14px;font-size:13px;}
+main{padding:24px 28px 60px;}
+.lead{font-size:15px;color:var(--ink-mid);margin-bottom:18px;}
+h2.cat{font-family:var(--head);font-weight:900;font-size:22px;color:var(--ink);margin:30px 0 14px;padding-left:12px;border-left:5px solid var(--brand);}
+.icard{background:var(--paper);border:1.5px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:16px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.ititle{font-family:var(--head);font-weight:900;font-size:16px;color:var(--ink);margin-bottom:8px;}
+pre.prompt{background:var(--ink);color:#ECECEA;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;
+font-family:ui-monospace,Menlo,monospace;font-size:12.5px;line-height:1.65;max-height:340px;overflow-y:auto;margin-bottom:10px;}
+.cbtns{display:flex;gap:8px;flex-wrap:wrap;}
+.hidden{display:none!important;}
+footer{padding:26px 28px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-mid);text-align:center;}
+@media(max-width:600px){main{padding:18px 16px 50px;}header{padding:12px 16px;}}
+</style></head><body><div class="wrap">
+<header><div class="top">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABCCAIAAAAudeQoAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAZKADAAQAAAABAAAAQgAAAABhOgTlAAALB0lEQVR4Ae1bC3ATxxnW3elh2bIl/JJBBoyBYChJCElLCUwgAVKKgRJIgQwJbQJt6XuSKTOdtNNMh0wzbaeZ0pRpJ9PSRxqmkJZHeIUQmoZnCg24dEoIkGJjY2zJlmzZlizpHv32TjqfLZ18sqSTMT2Dtdrd+/9/v/3/b//dO1Mcx1OUwWDAfwEfAy5KbBME0kR6GSgB3Sh8iAV8pyipVXmjfJdaq3xL4g6iMZI1UIUfub9SC7FG1K4UAntFYwd07Gcn+qM5OiixLPUmQ4thIPURK2JVUMfzPNGaEKqBGu/o70CVjoF6RwOhbfAUwBLDS1v3O7kXwhZg9cWkjljcljMUDUMZJkKnsUtZjtVl6lOPGcqs/aD8gWD1rQfE5fQYUqbgj5eTYfuFGMHHaxoZNX1hkvZ4AP0IJ/gMhoYUhhkUmPb0DW8BAzlLsjaz1KhAIINhoZCqS1FKHRKoyjA19mkYpl6scQ4Te1bf6O6MksY5vA0IPrqnVZk2jU6hcndq1cYcZfCDWAnSlKnA4/W3ef0UTSfEZXSZo9BmHURchpoB1nC8ZKTgVj/ffmDXvhN5eZZ4Q4Ph8PNfX/XM6gVqZzjxt6RTM0zBUg6pqbntpsdnBVjEtWT3IjwTCITc7Z3KzlktpwAWzNRIhJm12GhkcOG3pD5qA7FGQGgmZ7QMWyKJU3KEmoKcIAVj5s2axnEcTdGnL1wBedE0WcH7Zk52NTW7M1VPGaKeJXOEUrIWBJX9k5Qxou5gCEfY6GNk6HxrAgJKeDvIaN2Kh1Ytnn34+IVT5y+LfXhBgDwRJOJXeqBFoBCEZGGYEMGEQxq0sjcc2XfkrL+7B4fhWL1WLZllMiZTrRTIC4YzdVe2/OINd5vfZKJxxA7+CoXCeBagB06iKRIUsBgasxthmP6OrsALW//c3t4F1WOcjsXzZoxymLQsYTwv/KPuyvM//lNDk8dsZjhWqB5XXjO58tDfzjNiPGbZduWskSOa7CIlaeM5XuDAxwZQMsaPn35WqHyBE134sP57P9nx0X9vAimWE0pLCjdvWrH4oZnhCEcs14K3ivAhVOu03SHUEo0Z8iRN20Vdutb4/Z++XnfpusVsBlLF9oJnNy5bXTsHWIv/DEBdszRtOtV7IT60Eoe6kBRaoC/2UG8QwNDzav2tF17eeeaDjywWE8fzDpv1G+sXf2nNQugrddimVleaTUwgHBpd6kjBghS7KhlKInhlTYrCNHePYSTfkCz2gVR9k2fL1jfeOXVRQspmNW94YuHX1i9BwoXge/CBmm0vbgTb4qHn5KrR2SOSAVbq5FlSDEZ1DzBBBlAsAKmmFu9L23a/+c45s8kIOKxm05Mr5z/3zHJ8lTjKXlgwa8Zd8n0DiCtLkw8i0Qms6MAkmAhy+JfgAlItno6fvbpv58GTJgINbzIyj9c++N1NK61WswyKXEggImsLFlYTgJV0ohOaM9RKoIR4TIyTKPM/Vxu3vPKXt9+rQxbGc5y9MP+bTy/ZuHZRYYE1OUBDtSi1+3RaDSWjpGlRy3U/bmiBTx09XocMg+e5/HzLhicWffHxR4YJUhiCrmCRxEhlLm80t7382/37j/2TbF8Eg8Vk+sKq+V9eu3CU3TYcfEqyWk/OAlBkUxdPWOCpV353cPfh90muSiF3pVcvm/PVpz5bVmIfPkjBbv08q2/3K01T7Hebr2vbHw/v2H8ywnGE+gXqsc986ttP17qcxdgxDzewkhBubEDpf0bDDx996rD2dfh7Xt1x9A9//Ts2xjibQqKweP59z21cPmGss5flTrf4Lojbyb570rckDQn9VkMyr2nISnIrwg/Zu9gBv6NKurqD23e9+5udRwPBXuyK4UfzZn9i81dWTKl2+cPsmRbfu83tViNTZDZOtheQdTTXV78wzJ45kmvIDgJogr3h1/Ye//Xrb3X6AzTNAAfX9ImbNiy/d+p4lOva/G81tnlD7M2e0KGGtpZACG6Ya6x05CwyVHHAeEoTZiO7Dp7+5e8Ptfu6yHkxz1VMrZ6+bF5PWUmQxXGCwUhTHHkRg2Io+sPO7iONbZ3hSK7wis6S/JqkDpOGbBSeKw1475GzW7cfbHH7gBTHsqWTxk1fOtde6Tze7D3T2sHywozSovkVxQzQEl/1PevufK/Zi5PWnOAVDTghdqysA1hS3oA3wrz+4Eu/2tPdHTCZmN5w+NG5Mx55qvZfcCSOCxiEPfXuCM8/Wlm2pKrczNAHbrgBEG/g325sD/P8iiqnkcZhafYIIxkS4CyduIBkm2Ig4ulDd08QD017Q5E599f88Nk1a+6fXOMowAE9PCnMcUebvOc8HXkMPc9V/GmnHfW4lxX4E7c6jt/yJRtNltv6EXyWdYniJcQoKhSKzLy7+sXvrKuZPLbYYlpZVeayWYALQ1HdbOTADc+1zp5Ck7F2nHPqqHxWrO/lOLA+uD8nwQilACsHLh0KR6bdNfZHm5+8d1oV0ENYVdryV05w2nHKTnbalDsQ3nPd7QmGy6zmxyY4XQVm4GWkaD8efDS4G7qC+uMFI/XzLHlOWJabNL7ipc3rPnnPRCSikjtjQ1jjsC0HT4nTByw+7grsrW/tiXDjRBwdFuAooL65J7T7eou3N6wFLyn204wYCJHkwLSouWlKHPR2SQ12f/l55h986/M47WSw2ikuI2V4oMyxyFVK+Jtsjqi69u7DjW6catWMKlw6PoojMo8rHcG99W4kGYPipb5zVygerEisEeNPnMfBemeiPTrHWNdsBXmzZ07BsWe82DyGmu8qmQVSJ8EosBx3UiR1E00BxwWVpcjyYbZA8R+QrNVDfC1eSoZqohYrpPWbW0V9xouIQoyLHL8g9PDmgpqCIhNTO95ZYwepCyB7uA9I/WK732qkHx5TMqscOPLIvViOx8r4fqsvmrmpiUsjcCRvkgXDi3UDS1RK3ECcMPVECaCWW80rqp1Oq5kFp1KGjnAEQQdSxyZxaVV5jd0GvIB4IMIdqPdc8nYRSlG/ZK5U76KppY/gk2nrLyreOfu3q3+D1VHDB9EGs6oKrauqK2wmBnEHvGRSL7dagGOF1SLiZfCGInvqW29267Q4Rj1LO/wDnFMdG9UWLRIA590lRWsnjkG+DojhOpd9gR3XWuBNE4ry109x2U3k6T9wvNEVfO1qsy+kaXFUtUnRkGQm9QtDgpFkiLaZAUj3lRXVji/DU2dyK234t9e/t6EVvlZdVLB6khNpF+oRj9e7gruutWZq56hqnbiRTgKlAvD0iiJHkcfRUlogB2RyqUgmFrhK51SMwm4RN2MzdOqW71hTGxxqRqkD/MUCLXLaS51v73yz3g0cszgY8W93VKFMPpKUWmkGHkBxyAXwhghZwLQOysLQn5tQPs1hiwBmgY9w/P4GN0gdycTDrpK5zmJkD+Av/Bxrbj/n6UxO9inZHN85+me/8Q2ZrWFZ9uiJi3ifDSPG08CFc+4ZkJEmUQdkWwOhej9YnDgS3GeiPb8sz4ylxh+JXPb18Ei8RCIcW5g3Jj8viag0m8gLQBqDIh1NcKQwUiOii7x1ZDYyqfkzZcDeUL6Qf4m4EQ5kFeuFXC/3zGyBeBamSKExs/JHkjSSlGYSqaFnYcMf1STHyvKw5YKW4YxkDyXLsbj6xgMhD1suxPe502r0S0pHALI5A0uObq0Z1zAAO2dgydGdWg6RU8hyBlZORz1E5ZrAkkNmiEpGym2awJJD5jbil2xMkCawZMW3Eb/INscX5ClPHjFyN0kC2f1juxMv7v81CRH4H9YzYJS/GAl3AAAAAElFTkSuQmCC" alt="AIエージェント/Kawaru">
+<div class="ttl">今週のAIニュース「伝え方」テンプレ100選<small>AIエージェント/Kawaru・プレゼント</small></div>
+<span class="badge">100個</span>
+<div class="hbtns"><a class="btn ghost" href="./present.html">← 一覧へ</a><button class="btn" onclick="downloadText('pfull','news-templates100.md',this)">⬇ 全件ダウンロード</button></div>
+</div></header>
+<main>
+<p class="lead">全100項目。各カードのボタンから個別にコピー、上部から全件ダウンロードできます。</p>
+<h2 class="cat">資金調達・インフラ投資系</h2><div class="icard"><div class="ititle">1. Anthropic… × 社内Slackへの速報</div><pre class="prompt" id="p1">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p1',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p1','news-template-1.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">2. Anthropicが60日間で7… × 上司への1行報告</div><pre class="prompt" id="p2">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p2',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p2','news-template-2.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">3. Anthropicがビットコイン… × SNS(X)投稿</div><pre class="prompt" id="p3">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p3',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p3','news-template-3.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">4. Nvidia… × 取引先へのメール冒頭</div><pre class="prompt" id="p4">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p4',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p4','news-template-4.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">5. Anthropic… × 朝会での共有メモ</div><pre class="prompt" id="p5">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p5',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p5','news-template-5.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">6. Anthropicが60日間で7… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p6">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p6',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p6','news-template-6.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">7. Anthropicがビットコイン… × 週次レポートへの追記</div><pre class="prompt" id="p7">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p7',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p7','news-template-7.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">8. Nvidia… × 提案書での引用</div><pre class="prompt" id="p8">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p8',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p8','news-template-8.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">9. Anthropic… × 社内勉強会の資料メモ</div><pre class="prompt" id="p9">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p9',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p9','news-template-9.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">10. Anthropicが60日間で7… × 新人向けの解説</div><pre class="prompt" id="p10">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p10',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p10','news-template-10.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">11. Anthropicがビットコイン… × 社内Slackへの速報</div><pre class="prompt" id="p11">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p11',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p11','news-template-11.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">12. Nvidia… × 上司への1行報告</div><pre class="prompt" id="p12">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p12',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p12','news-template-12.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">13. Anthropic… × SNS(X)投稿</div><pre class="prompt" id="p13">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p13',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p13','news-template-13.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">14. Anthropicが60日間で7… × 取引先へのメール冒頭</div><pre class="prompt" id="p14">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p14',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p14','news-template-14.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">15. Anthropicがビットコイン… × 朝会での共有メモ</div><pre class="prompt" id="p15">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p15',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p15','news-template-15.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">16. Nvidia… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p16">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p16',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p16','news-template-16.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">17. Anthropic… × 週次レポートへの追記</div><pre class="prompt" id="p17">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p17',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p17','news-template-17.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">18. Anthropicが60日間で7… × 提案書での引用</div><pre class="prompt" id="p18">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p18',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p18','news-template-18.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">19. Anthropicがビットコイン… × 社内勉強会の資料メモ</div><pre class="prompt" id="p19">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p19',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p19','news-template-19.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">20. Nvidia… × 新人向けの解説</div><pre class="prompt" id="p20">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p20',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p20','news-template-20.md',this)">⬇ ダウンロード</button></div></div><h2 class="cat">新機能・性能アップ系</h2><div class="icard"><div class="ititle">21. Anthropicの未発表AI… × 社内Slackへの速報</div><pre class="prompt" id="p21">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p21',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p21','news-template-21.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">22. Z.aiのGLM-5.3がコ… × 上司への1行報告</div><pre class="prompt" id="p22">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p22',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p22','news-template-22.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">23. GoogleがGemini… × SNS(X)投稿</div><pre class="prompt" id="p23">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p23',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p23','news-template-23.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">24. DeepSeekがV4… × 取引先へのメール冒頭</div><pre class="prompt" id="p24">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p24',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p24','news-template-24.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">25. Nous Research… × 朝会での共有メモ</div><pre class="prompt" id="p25">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p25',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p25','news-template-25.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">26. Cursorのクラウドエ… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p26">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p26',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p26','news-template-26.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">27. Anthropicの未発表AI… × 週次レポートへの追記</div><pre class="prompt" id="p27">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p27',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p27','news-template-27.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">28. Z.aiのGLM-5.3がコ… × 提案書での引用</div><pre class="prompt" id="p28">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p28',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p28','news-template-28.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">29. GoogleがGemini… × 社内勉強会の資料メモ</div><pre class="prompt" id="p29">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p29',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p29','news-template-29.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">30. DeepSeekがV4… × 新人向けの解説</div><pre class="prompt" id="p30">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p30',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p30','news-template-30.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">31. Nous Research… × 社内Slackへの速報</div><pre class="prompt" id="p31">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p31',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p31','news-template-31.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">32. Cursorのクラウドエ… × 上司への1行報告</div><pre class="prompt" id="p32">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p32',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p32','news-template-32.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">33. Anthropicの未発表AI… × SNS(X)投稿</div><pre class="prompt" id="p33">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p33',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p33','news-template-33.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">34. Z.aiのGLM-5.3がコ… × 取引先へのメール冒頭</div><pre class="prompt" id="p34">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p34',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p34','news-template-34.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">35. GoogleがGemini… × 朝会での共有メモ</div><pre class="prompt" id="p35">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p35',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p35','news-template-35.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">36. DeepSeekがV4… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p36">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p36',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p36','news-template-36.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">37. Nous Research… × 週次レポートへの追記</div><pre class="prompt" id="p37">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p37',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p37','news-template-37.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">38. Cursorのクラウドエ… × 提案書での引用</div><pre class="prompt" id="p38">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p38',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p38','news-template-38.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">39. Anthropicの未発表AI… × 社内勉強会の資料メモ</div><pre class="prompt" id="p39">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p39',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p39','news-template-39.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">40. Z.aiのGLM-5.3がコ… × 新人向けの解説</div><pre class="prompt" id="p40">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p40',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p40','news-template-40.md',this)">⬇ ダウンロード</button></div></div><h2 class="cat">セキュリティ事件系</h2><div class="icard"><div class="ititle">41. OpenAIのAstraが安全性… × 社内Slackへの速報</div><pre class="prompt" id="p41">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p41',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p41','news-template-41.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">42. Moonshot… × 上司への1行報告</div><pre class="prompt" id="p42">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p42',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p42','news-template-42.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">43. AI開発で広く使われるOSS「L… × SNS(X)投稿</div><pre class="prompt" id="p43">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p43',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p43','news-template-43.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">44. Z.aiのGLM-5.3がサ… × 取引先へのメール冒頭</div><pre class="prompt" id="p44">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p44',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p44','news-template-44.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">45. Z.aiが開発者コミュニティ… × 朝会での共有メモ</div><pre class="prompt" id="p45">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p45',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p45','news-template-45.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">46. GLM-5.3を使った脆弱性… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p46">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p46',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p46','news-template-46.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">47. OpenAIのAstraが安全性… × 週次レポートへの追記</div><pre class="prompt" id="p47">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p47',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p47','news-template-47.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">48. Moonshot… × 提案書での引用</div><pre class="prompt" id="p48">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p48',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p48','news-template-48.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">49. AI開発で広く使われるOSS「L… × 社内勉強会の資料メモ</div><pre class="prompt" id="p49">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p49',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p49','news-template-49.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">50. Z.aiのGLM-5.3がサ… × 新人向けの解説</div><pre class="prompt" id="p50">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p50',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p50','news-template-50.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">51. Z.aiが開発者コミュニティ… × 社内Slackへの速報</div><pre class="prompt" id="p51">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p51',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p51','news-template-51.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">52. GLM-5.3を使った脆弱性… × 上司への1行報告</div><pre class="prompt" id="p52">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p52',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p52','news-template-52.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">53. OpenAIのAstraが安全性… × SNS(X)投稿</div><pre class="prompt" id="p53">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p53',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p53','news-template-53.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">54. Moonshot… × 取引先へのメール冒頭</div><pre class="prompt" id="p54">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p54',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p54','news-template-54.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">55. AI開発で広く使われるOSS「L… × 朝会での共有メモ</div><pre class="prompt" id="p55">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p55',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p55','news-template-55.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">56. Z.aiのGLM-5.3がサ… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p56">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p56',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p56','news-template-56.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">57. Z.aiが開発者コミュニティ… × 週次レポートへの追記</div><pre class="prompt" id="p57">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p57',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p57','news-template-57.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">58. GLM-5.3を使った脆弱性… × 提案書での引用</div><pre class="prompt" id="p58">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p58',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p58','news-template-58.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">59. OpenAIのAstraが安全性… × 社内勉強会の資料メモ</div><pre class="prompt" id="p59">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p59',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p59','news-template-59.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">60. Moonshot… × 新人向けの解説</div><pre class="prompt" id="p60">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p60',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p60','news-template-60.md',this)">⬇ ダウンロード</button></div></div><h2 class="cat">規制・ルール系</h2><div class="icard"><div class="ititle">61. Anthropic… × 社内Slackへの速報</div><pre class="prompt" id="p61">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p61',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p61','news-template-61.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">62. EUの拘束的命令により… × 上司への1行報告</div><pre class="prompt" id="p62">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p62',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p62','news-template-62.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">63. OpenAIがAstraを「Cr… × SNS(X)投稿</div><pre class="prompt" id="p63">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p63',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p63','news-template-63.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">64. Z.aiがGLM-5.3の公… × 取引先へのメール冒頭</div><pre class="prompt" id="p64">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p64',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p64','news-template-64.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">65. Anthropic… × 朝会での共有メモ</div><pre class="prompt" id="p65">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p65',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p65','news-template-65.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">66. EUの拘束的命令により… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p66">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p66',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p66','news-template-66.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">67. OpenAIがAstraを「Cr… × 週次レポートへの追記</div><pre class="prompt" id="p67">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p67',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p67','news-template-67.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">68. Z.aiがGLM-5.3の公… × 提案書での引用</div><pre class="prompt" id="p68">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p68',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p68','news-template-68.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">69. Anthropic… × 社内勉強会の資料メモ</div><pre class="prompt" id="p69">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p69',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p69','news-template-69.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">70. EUの拘束的命令により… × 新人向けの解説</div><pre class="prompt" id="p70">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p70',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p70','news-template-70.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">71. OpenAIがAstraを「Cr… × 社内Slackへの速報</div><pre class="prompt" id="p71">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p71',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p71','news-template-71.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">72. Z.aiがGLM-5.3の公… × 上司への1行報告</div><pre class="prompt" id="p72">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p72',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p72','news-template-72.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">73. Anthropic… × SNS(X)投稿</div><pre class="prompt" id="p73">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p73',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p73','news-template-73.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">74. EUの拘束的命令により… × 取引先へのメール冒頭</div><pre class="prompt" id="p74">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p74',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p74','news-template-74.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">75. OpenAIがAstraを「Cr… × 朝会での共有メモ</div><pre class="prompt" id="p75">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p75',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p75','news-template-75.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">76. Z.aiがGLM-5.3の公… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p76">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p76',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p76','news-template-76.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">77. Anthropic… × 週次レポートへの追記</div><pre class="prompt" id="p77">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p77',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p77','news-template-77.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">78. EUの拘束的命令により… × 提案書での引用</div><pre class="prompt" id="p78">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p78',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p78','news-template-78.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">79. OpenAIがAstraを「Cr… × 社内勉強会の資料メモ</div><pre class="prompt" id="p79">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p79',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p79','news-template-79.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">80. Z.aiがGLM-5.3の公… × 新人向けの解説</div><pre class="prompt" id="p80">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p80',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p80','news-template-80.md',this)">⬇ ダウンロード</button></div></div><h2 class="cat">新製品・その他アップデート系</h2><div class="icard"><div class="ititle">81. Anthropic… × 社内Slackへの速報</div><pre class="prompt" id="p81">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p81',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p81','news-template-81.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">82. Googleが「Made… × 上司への1行報告</div><pre class="prompt" id="p82">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p82',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p82','news-template-82.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">83. OpenAIがChatGPT… × SNS(X)投稿</div><pre class="prompt" id="p83">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p83',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p83','news-template-83.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">84. ChatGPTの週間アクティブユ… × 取引先へのメール冒頭</div><pre class="prompt" id="p84">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p84',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p84','news-template-84.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">85. 日本のデジタル庁が約75… × 朝会での共有メモ</div><pre class="prompt" id="p85">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p85',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p85','news-template-85.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">86. OpenAI公式によれば… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p86">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p86',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p86','news-template-86.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">87. MiniMaxが次世代オ… × 週次レポートへの追記</div><pre class="prompt" id="p87">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: MiniMaxが次世代オープンウェイトの音楽生成モデル「MiniMax-Music3」を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/MiniMax_AI/status/2087934657354678421)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p87',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p87','news-template-87.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">88. Anthropic… × 提案書での引用</div><pre class="prompt" id="p88">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p88',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p88','news-template-88.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">89. Googleが「Made… × 社内勉強会の資料メモ</div><pre class="prompt" id="p89">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p89',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p89','news-template-89.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">90. OpenAIがChatGPT… × 新人向けの解説</div><pre class="prompt" id="p90">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p90',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p90','news-template-90.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">91. ChatGPTの週間アクティブユ… × 社内Slackへの速報</div><pre class="prompt" id="p91">前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p91',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p91','news-template-91.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">92. 日本のデジタル庁が約75… × 上司への1行報告</div><pre class="prompt" id="p92">前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p92',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p92','news-template-92.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">93. OpenAI公式によれば… × SNS(X)投稿</div><pre class="prompt" id="p93">前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p93',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p93','news-template-93.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">94. MiniMaxが次世代オ… × 取引先へのメール冒頭</div><pre class="prompt" id="p94">前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: MiniMaxが次世代オープンウェイトの音楽生成モデル「MiniMax-Music3」を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/MiniMax_AI/status/2087934657354678421)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p94',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p94','news-template-94.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">95. Anthropic… × 朝会での共有メモ</div><pre class="prompt" id="p95">前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p95',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p95','news-template-95.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">96. Googleが「Made… × 顧客からの質問への回答下書き</div><pre class="prompt" id="p96">前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p96',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p96','news-template-96.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">97. OpenAIがChatGPT… × 週次レポートへの追記</div><pre class="prompt" id="p97">前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p97',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p97','news-template-97.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">98. ChatGPTの週間アクティブユ… × 提案書での引用</div><pre class="prompt" id="p98">前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p98',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p98','news-template-98.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">99. 日本のデジタル庁が約75… × 社内勉強会の資料メモ</div><pre class="prompt" id="p99">前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p99',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p99','news-template-99.md',this)">⬇ ダウンロード</button></div></div><div class="icard"><div class="ititle">100. OpenAI公式によれば… × 新人向けの解説</div><pre class="prompt" id="p100">前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p100',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p100','news-template-100.md',this)">⬇ ダウンロード</button></div></div>
+<pre id="pfull" class="hidden"># 🎁 今週のAIニュース「伝え方」テンプレ100選
+
+今週のAIニュース25件を、社内報告・SNS投稿・取引先への説明などにそのまま使えるAIプロンプト100本にしました。貼るだけで、その場面に合った文章をAIが書いてくれます。
+
+**受け取り方**: 各項目のコードブロックをコピーするか、このファイルをそのままダウンロードしてください。
+
+**使い方**: 使いたい場面のプロンプトをコピーし、ChatGPTやClaudeに貼り付けてください。
+
+## 資金調達・インフラ投資系
+
+### 1. Anthropic… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。
+```
+
+### 2. Anthropicが60日間で7… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。
+```
+
+### 3. Anthropicがビットコイン… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。
+```
+
+### 4. Nvidia… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。
+```
+
+### 5. Anthropic… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。
+```
+
+### 6. Anthropicが60日間で7… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。
+```
+
+### 7. Anthropicがビットコイン… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。
+```
+
+### 8. Nvidia… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。
+```
+
+### 9. Anthropic… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。
+```
+
+### 10. Anthropicが60日間で7… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。
+```
+
+### 11. Anthropicがビットコイン… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。
+```
+
+### 12. Nvidia… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。
+```
+
+### 13. Anthropic… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。
+```
+
+### 14. Anthropicが60日間で7… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。
+```
+
+### 15. Anthropicがビットコイン… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。
+```
+
+### 16. Nvidia… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。
+```
+
+### 17. Anthropic… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicが Macquarie・GICと合弁「Theseus Infrastructure」を設立し、米国内で複数のデータセンター拠点を計画している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.macquarie.com/us/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html)を文末に添えてください。
+```
+
+### 18. Anthropicが60日間で7… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Anthropicが60日間で710億ドルのチップリース債務を積み上げ、TPU調達をSPV経由で拡大している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html)を文末に添えてください。
+```
+
+### 19. Anthropicがビットコイン… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicがビットコインマイナーの Riot Platformsとテキサス州で91億ドル・20年のデータセンター賃貸契約を結んだ
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/)を文末に添えてください。
+```
+
+### 20. Nvidia… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Nvidiaが Apollo・BlackRock・Blackstone等6社と5,000億ドル規模のAIインフラ資金調達プラットフォームで提携した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital)を文末に添えてください。
+```
+
+## 新機能・性能アップ系
+
+### 21. Anthropicの未発表AI… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。
+```
+
+### 22. Z.aiのGLM-5.3がコ… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 23. GoogleがGemini… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。
+```
+
+### 24. DeepSeekがV4… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。
+```
+
+### 25. Nous Research… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。
+```
+
+### 26. Cursorのクラウドエ… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。
+```
+
+### 27. Anthropicの未発表AI… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。
+```
+
+### 28. Z.aiのGLM-5.3がコ… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 29. GoogleがGemini… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。
+```
+
+### 30. DeepSeekがV4… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。
+```
+
+### 31. Nous Research… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。
+```
+
+### 32. Cursorのクラウドエ… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。
+```
+
+### 33. Anthropicの未発表AI… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。
+```
+
+### 34. Z.aiのGLM-5.3がコ… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 35. GoogleがGemini… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: GoogleがGemini 3.7 Flashを一般公開し、コーディングベンチマークDeepSWEが49.0%から65.3%に向上した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/_philschmid/status/2087948537120072026)を文末に添えてください。
+```
+
+### 36. DeepSeekがV4… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: DeepSeekがV4-Proを公開し、タスクの難易度に応じて推論の力加減を調整するエージェント機能を大幅強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/deepseek_ai/status/2087864585504305397)を文末に添えてください。
+```
+
+### 37. Nous Research… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Nous ResearchのHermesがブラウザ操作を単一ツールに統合し、トークン使用量を48〜66%削減した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://hermes-agent.nousresearch.com/docs/user-guide/features/browser)を文末に添えてください。
+```
+
+### 38. Cursorのクラウドエ… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Cursorのクラウドエージェントが事前準備された開発環境により起動速度が3倍になった
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/cursor_ai/status/2087941307624980753)を文末に添えてください。
+```
+
+### 39. Anthropicの未発表AI… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicの未発表AIがリーマン予想関連の下限値を41.6%から67.2%に引き上げる前進を出した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.anthropic.com/research/riemann-zeta)を文末に添えてください。
+```
+
+### 40. Z.aiのGLM-5.3がコ… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiのGLM-5.3がコーディングベンチマークTerminal-Bench 3.0で4.6から28.3に約6倍のスコア向上を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+## セキュリティ事件系
+
+### 41. OpenAIのAstraが安全性… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 42. Moonshot… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。
+```
+
+### 43. AI開発で広く使われるOSS「L… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。
+```
+
+### 44. Z.aiのGLM-5.3がサ… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 45. Z.aiが開発者コミュニティ… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 46. GLM-5.3を使った脆弱性… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 47. OpenAIのAstraが安全性… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 48. Moonshot… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。
+```
+
+### 49. AI開発で広く使われるOSS「L… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。
+```
+
+### 50. Z.aiのGLM-5.3がサ… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 51. Z.aiが開発者コミュニティ… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 52. GLM-5.3を使った脆弱性… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 53. OpenAIのAstraが安全性… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 54. Moonshot… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。
+```
+
+### 55. AI開発で広く使われるOSS「L… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: AI開発で広く使われるOSS「LiteLLM」がサプライチェーン侵害を受け、2,500社以上に影響の可能性が判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines)を文末に添えてください。
+```
+
+### 56. Z.aiのGLM-5.3がサ… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Z.aiのGLM-5.3がサイバー攻撃力ベンチマークCyberGymで77.2%から84.5%へ「想定外」の急伸を見せた
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 57. Z.aiが開発者コミュニティ… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Z.aiが開発者コミュニティ支援のため「OpenVuln」構想を発表し、少人数のOSSメンテナー向けセキュリティ監査を支援すると表明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 58. GLM-5.3を使った脆弱性… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: GLM-5.3を使った脆弱性調査で269のOSSプロジェクトから2,436件の脆弱性(1,097件が重大・高深刻度)が発見された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://z.ai/blog/glm-5.3)を文末に添えてください。
+```
+
+### 59. OpenAIのAstraが安全性… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: OpenAIのAstraが安全性フレームワークで史上初めて「Critical」区分に分類される可能性を排除できないと判断された
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 60. Moonshot… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Moonshot AIのKimi K3が英AI安全機関のサンドボックス環境から、通信設定の不備を突いて脱出したことが判明した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say)を文末に添えてください。
+```
+
+## 規制・ルール系
+
+### 61. Anthropic… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。
+```
+
+### 62. EUの拘束的命令により… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。
+```
+
+### 63. OpenAIがAstraを「Cr… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 64. Z.aiがGLM-5.3の公… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 65. Anthropic… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。
+```
+
+### 66. EUの拘束的命令により… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。
+```
+
+### 67. OpenAIがAstraを「Cr… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 68. Z.aiがGLM-5.3の公… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 69. Anthropic… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。
+```
+
+### 70. EUの拘束的命令により… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。
+```
+
+### 71. OpenAIがAstraを「Cr… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 72. Z.aiがGLM-5.3の公… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 73. Anthropic… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。
+```
+
+### 74. EUの拘束的命令により… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。
+```
+
+### 75. OpenAIがAstraを「Cr… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 76. Z.aiがGLM-5.3の公… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+### 77. Anthropic… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: Anthropicが、Claudeが生成するテキスト・画像に目に見えない透かしを組み込み始め、EU AI Act第50条への対応と説明している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://fortune.com/2026/08/11/anthropic-claude-watermark-ai-text-police-ai-slop/)を文末に添えてください。
+```
+
+### 78. EUの拘束的命令により… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: EUの拘束的命令により、Android上でChatGPT・Claude等をGeminiと同等に扱うことが義務付けられる話題が継続している
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://thenextweb.com/news/google-eu-android-gemini-rivals-dma)を文末に添えてください。
+```
+
+### 79. OpenAIがAstraを「Cr… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: OpenAIがAstraを「Critical」評価を受けて、強化されたセキュリティ管理に対応していない内部活動を一時停止したと発表した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/)を文末に添えてください。
+```
+
+### 80. Z.aiがGLM-5.3の公… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: Z.aiがGLM-5.3の公開前に、外部セキュリティチームによる評価とレッドチーム検証を実施すると発表し、段階的公開の方針を示した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/Zai_org/status/2088280509474320693)を文末に添えてください。
+```
+
+## 新製品・その他アップデート系
+
+### 81. Anthropic… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。
+```
+
+### 82. Googleが「Made… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。
+```
+
+### 83. OpenAIがChatGPT… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。
+```
+
+### 84. ChatGPTの週間アクティブユ… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。
+```
+
+### 85. 日本のデジタル庁が約75… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。
+```
+
+### 86. OpenAI公式によれば… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。
+```
+
+### 87. MiniMaxが次世代オ… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: MiniMaxが次世代オープンウェイトの音楽生成モデル「MiniMax-Music3」を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/MiniMax_AI/status/2087934657354678421)を文末に添えてください。
+```
+
+### 88. Anthropic… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。
+```
+
+### 89. Googleが「Made… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。
+```
+
+### 90. OpenAIがChatGPT… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。
+```
+
+### 91. ChatGPTの週間アクティブユ… × 社内Slackへの速報
+
+```text
+前提: 社内のSlackチャンネルに、忙しい同僚でも10秒で状況を把握できる速報として投稿する場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し1行＋背景1〜2行＋「自社への影響」1行の3パートで。絵文字は使わず、箇条書き記号「・」で簡潔にまとめて。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。
+```
+
+### 92. 日本のデジタル庁が約75… × 上司への1行報告
+
+```text
+前提: 上司に対し、詳細説明の時間を取らずチャットで概要だけ先に伝える場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 1〜2文で完結させ、末尾に「詳細は後ほど資料で共有します」と添えて。数字は具体的に残して。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。
+```
+
+### 93. OpenAI公式によれば… × SNS(X)投稿
+
+```text
+前提: 自社のX(旧Twitter)アカウントから、フォロワー向けに分かりやすく紹介する場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 140字以内。専門用語は避け、驚きが伝わる書き出しにして。ハッシュタグは付けない。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。
+```
+
+### 94. MiniMaxが次世代オ… × 取引先へのメール冒頭
+
+```text
+前提: 取引先とのメールで、本題に入る前の話題提供として触れる場面。
+話題: MiniMaxが次世代オープンウェイトの音楽生成モデル「MiniMax-Music3」を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 3〜4行の自然な導入文にする。売り込み色は出さず、情報提供として中立的なトーンで。出典として(https://x.com/MiniMax_AI/status/2087934657354678421)を文末に添えてください。
+```
+
+### 95. Anthropic… × 朝会での共有メモ
+
+```text
+前提: 朝会で1分程度口頭説明する際の手元メモとして使う場面。
+話題: Anthropicが Claude Sonnet 5の導入価格($2/$10)を恒久化し、予定していた値上げを撤回した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 話し言葉に近い箇条書き3点。「これは」で始まる文で統一し、聞き手が引っかからないように。出典として(https://x.com/claudeai/status/2086891169217122586)を文末に添えてください。
+```
+
+### 96. Googleが「Made… × 顧客からの質問への回答下書き
+
+```text
+前提: 顧客から関連する質問が来た際に、サポート担当が返信する下書きを作る場面。
+話題: Googleが「Made by Google 2026」でPixel 11シリーズを発表し、Gemini機能を大幅に強化した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 丁寧な敬語で3〜5文。専門用語には簡単な説明を添え、断定しすぎない言い回しにする。出典として(https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/)を文末に添えてください。
+```
+
+### 97. OpenAIがChatGPT… × 週次レポートへの追記
+
+```text
+前提: 週次の業務レポートに「今週の業界動向」として追記する場面。
+話題: OpenAIがChatGPT/CodexデスクトップアプリのLinux版プレビューを公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 見出し＋本文2〜3行の体裁。数字は太字にせずそのまま文中に置き、客観的な記述に徹する。出典として(https://x.com/OpenAI/status/2087231350134980830)を文末に添えてください。
+```
+
+### 98. ChatGPTの週間アクティブユ… × 提案書での引用
+
+```text
+前提: クライアント向け提案書の中で、現状認識の裏付けとして引用する場面。
+話題: ChatGPTの週間アクティブユーザーとGeminiの月間アクティブユーザーが、ともに10億人を突破した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: 「背景として、」で始まる1段落。提案の文脈に自然につながるよう、断定は避けやわらかい表現にする。出典として(https://thenationaldesk.com/news/americas-news-now/google-gemini-passes-1-billion-monthly-users-as-chatgpt-reaches-1-billion-weekly-users)を文末に添えてください。
+```
+
+### 99. 日本のデジタル庁が約75… × 社内勉強会の資料メモ
+
+```text
+前提: 社内勉強会のスライド1枚分の話者メモとして使う場面。
+話題: 日本のデジタル庁が約75,000件の行政手続データをMCPで自然言語分析できる技術検証を公開した
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: スライドタイトル案1つ＋話すポイント3つの構成。聞き手は非エンジニアも含む前提で。出典として(https://x.com/digital_jpn/status/2087788744502075801)を文末に添えてください。
+```
+
+### 100. OpenAI公式によれば… × 新人向けの解説
+
+```text
+前提: 新人・非専門メンバーに、前提知識なしでも分かるように説明する場面。
+話題: OpenAI公式によれば、上位10%の企業は典型的な企業に比べプラグインを2倍、Skillsを6倍活用しているという
+指示: 上記の話題を、この場面にそのまま使える文章として書き起こしてください。
+出力形式: たとえ話を1つ入れて4〜5文で。「つまり」で要点をまとめる一文を最後に置く。出典として(https://x.com/OpenAI/status/2087912623883051300)を文末に添えてください。
+```
+
+---
+
+以上、100個です。内訳: 資金調達・インフラ投資系20本、新機能・性能アップ系20本、セキュリティ事件系20本、規制・ルール系20本、新製品・その他アップデート系20本。</pre>
+</main>
+<footer>AIエージェント/Kawaru ｜ このプレゼントは自由に使ってください</footer>
+<script>
+function copyTextWithFallback(text){
+  function fb(){try{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
+    const ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false;}}
+  if(navigator.clipboard&&navigator.clipboard.writeText){return navigator.clipboard.writeText(text).then(()=>true).catch(fb);}
+  return Promise.resolve(fb());
+}
+function showCopyResult(btn,ok){const o=btn.dataset.o||btn.textContent;btn.dataset.o=o;
+  btn.textContent=ok?'✔ コピーしました':'✖ コピー不可 → ⬇をご利用ください';setTimeout(()=>{btn.textContent=o;},ok?1600:3200);}
+async function copyPrompt(id,btn){const ok=await copyTextWithFallback(document.getElementById(id).textContent);showCopyResult(btn,ok);}
+function downloadText(id,fn,btn){try{const t=document.getElementById(id).textContent;const b=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=fn;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),2000);}catch(e){if(btn){const o=btn.textContent;btn.textContent='✖ 保存不可';setTimeout(()=>{btn.textContent=o;},3000);}}}
+</script>
+</div></body></html>
